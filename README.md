@@ -6,11 +6,17 @@ Converts logical expressions which consist of “and”, “or”, and “not”
 the rules of:
 
 (not x) =: (nand x)
+
 (and x y) =: (nand (nand x y))
+
 (and x y z) =: (nand (nand x y z))
+
 (and w x y z) =: (nand (nand w x y z))
+
 (or x y) =: (nand (nand x) (nand y))
+
 (or x y z) =: (nand (nand x) (nand y) (nand z))
+
 (or w x y z) =: (nand (nand w) (nand x) (nand y) (nand z))
 
 
