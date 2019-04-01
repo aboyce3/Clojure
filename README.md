@@ -4,6 +4,7 @@ Conversion to NAND logic
 
 Converts logical expressions which consist of “and”, “or”, and “not” connectives to ones which only use the “nand” connective. These follow 
 the rules of:
+
 (not x) =: (nand x)
 
 (and x y) =: (nand (nand x y))
