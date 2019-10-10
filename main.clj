@@ -20,14 +20,6 @@
   (simplify i)
   i))l))))
 
-;;deep substitute
-(defn bind-values [l m]
-(map (fn [i] 
-  (if (seq? i)
-  (bind-values i m)
-  (m i i))) 
-l))
-
 ;;helper that does the conversion
 (defn nand-helper [l]
 (cond
@@ -49,6 +41,14 @@ l))
   (nand-convert i)
   i)
   ) l))))
+
+;;deep substitute
+(defn bind-values [l m]
+(map (fn [i] 
+  (if (seq? i)
+  (bind-values i m)
+  (m i i))) 
+l))
 
 ;;Entire evaluation
 (defn evalexp [exp bindings]
