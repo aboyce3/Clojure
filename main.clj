@@ -50,7 +50,6 @@ l))
   i)
   ) l))))
 
-
 ;;Entire evaluation
 (defn evalexp [exp bindings]
   (simplify (nand-convert (bind-values exp bindings))))
