@@ -11,9 +11,7 @@
  (if (= (remove seq? l) (nth(filter seq? l)0))
  true
  (distinct l))
- :else (distinct l)
-
-))
+ :else (distinct l)))
 
 ;;Does the recursion with an anonymous function and runs the helper from the inside out
 (defn simplify [l]
